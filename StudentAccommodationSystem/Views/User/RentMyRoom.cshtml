@@ -1,0 +1,55 @@
+﻿@model StudentAccommodationSystem.Models.RoomModel
+@{
+    Layout = "~/Views/_LoggedInUser.cshtml";
+    ViewBag.Title = "Rent My Room";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container text-left">
+        <div class="row">
+            <h3> Enter Room Details</h3>
+        @using (Html.BeginForm("SubmitRoomForAdvertisement", "User", FormMethod.Post))
+        {
+           @Html.HiddenFor(x => x.Status, "Pending")
+            <div class="col-sm-5 well">
+               <p class="col-lg-3">@Html.LabelFor(x=> x.Title) </p>
+               <p class="col-lg-9"> @Html.TextBoxFor(x => x.Title)</p>
+           </div>
+           <div class="col-sm-2"></div>
+            <div class="col-sm-5 well">
+                <p class="col-lg-3">@Html.LabelFor(x => x.Description) </p>
+                <p class="col-lg-9"> @Html.TextBoxFor(x => x.Description)</p>
+            </div>
+            
+            <div class="col-sm-5 well">
+                <p class="col-lg-3">@Html.LabelFor(x => x.Address) </p>
+                <p class="col-lg-9"> @Html.TextBoxFor(x => x.Address)</p>
+            </div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-5 well">
+                <p class="col-lg-3">@Html.LabelFor(x => x.Price) </p>
+                <p class="col-lg-9">@Html.TextBoxFor(x => x.Price)</p>
+            </div>
+            <div class="col-sm-5 well">
+                <p class="col-lg-3"><b>Photos/Receipt</b></p>
+                <p class="col-lg-9"> @Html.TextBoxFor(x =>x.Image, new { type = "file" })</p>
+            </div>
+            <div class="col-sm-8">
+                <p><input type="submit" value="Get me Roommates" /></p>
+            </div>
+                }
+       </div>
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,16 @@
+﻿@model StudentAccommodationSystem.ViewModel.LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+    <div class="well">
+        <p>User Name: @Html.TextBoxFor(x => x.UserName) </p>
+        <p>Password : @Html.TextBoxFor(x => x.Password) </p>
+        <p><input type="submit" id="LoginSubmit" name="LoginSubmit" value="Login" /></p>
+    </div>
+}

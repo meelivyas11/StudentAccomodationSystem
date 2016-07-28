@@ -1,0 +1,44 @@
+﻿@model StudentAccommodationSystem.Models.RoomModel
+
+@{
+    ViewBag.Title = "Pending Advertisements";
+    Layout = "~/Views/_LoggedInAdmin.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container text-center" >
+        <div class="row">
+            <h2>Pending Advertisements from Hosts</h2>
+            @foreach (var room in ViewBag.MyList)
+            {
+                if (@room.Status == "Pending")
+                {
+                <div class="col-sm-7"> <img src=@room.Image class="img-responsive" style="width:100%" alt="Image"> </div>
+                <div class="col-sm-5 text-left well"> 
+                        <p> @Html.LabelFor(x => x.Title) @room.Title </p>
+                        <p> @Html.LabelFor(x => x.Address) @room.Address </p>
+                        <p> @Html.LabelFor(x => x.Price) @room.Price$ </p>
+                        <p> @Html.LabelFor(x => x.Title) @room.Title </p>
+                        <p><input type="submit" value="Approve" /></p>
+               </div>
+            <div class="row"></div>
+            <br/>
+                }
+            }
+            
+           <br>
+        </div>
+        
+    </div><br>
+
+</body>
+</html>

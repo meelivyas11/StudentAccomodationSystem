@@ -1,0 +1,19 @@
+﻿@model StudentAccommodationSystem.ViewModel.RegisterViewModel
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+@using (Html.BeginForm("Register", "Home", FormMethod.Post))
+{
+    <div class="well">
+        <p> Register </p>
+        <p>User Name: @Html.TextBoxFor(x => x.UserName) </p>
+        <p>Email : @Html.TextBoxFor(x => x.Email) </p>
+        <p>Password: @Html.PasswordFor(x => x.Password) </p>
+        <p>Confirm Password: @Html.PasswordFor(x => x.Password) </p>
+        <p><input type="submit" value="Register" /></p>
+    </div>
+}

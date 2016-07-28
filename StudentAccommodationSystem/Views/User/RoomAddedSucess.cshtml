@@ -1,0 +1,15 @@
+﻿@model StudentAccommodationSystem.Models.RoomModel
+
+@{
+    ViewBag.Title = "Room Advertised Successfully";
+    Layout = "~/Views/_LoggedInUser.cshtml";
+    decimal returningPayment = @Model.Price * 50 / 100; 
+}
+
+<div class="container text-center">
+    
+    <h2>Room Details Sent Successfully!!</h2>
+    <h4>You will soon get an e-mail with the details of the visiting guest</h4>
+    <h5>@returningPayment$ would be sent once the visitor confirms successful stay</h5>
+</div>
+
