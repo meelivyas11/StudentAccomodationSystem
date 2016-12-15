@@ -1,5 +1,5 @@
 # What is it?
-StudentAccomodationSystem is a prototype of an application which allows students to find shared accomodation near their universities. This prototype is built in C#.Net using MVC architecture. Entity Framework (code first approach) is used for connecting with database.
+StudentAccomodationSystem is a prototype of an application which provides a platform to hybrid students to find shared accomodation near their universities while they are visiting the university for a day or two. This prototype is built in C#.Net using MVC architecture. Entity Framework (code first approach) is used for connecting with database.
 
 As this application is just a prototype, static content is used to get functionalities working.
 
