@@ -1,5 +1,7 @@
 # What is it?
-StudentAccomodationSystem is developed in  C#.Net using MVC architecture. Entity Framework (code first approach) is used for connecting with database.
+StudentAccomodationSystem is a prototype of an application which allows students to find shared accomodation near their universities. This prototype is built in C#.Net using MVC architecture. Entity Framework (code first approach) is used for connecting with database.
+
+As this application is just a prototype, static content is used to get functionalities working.
 
 # How do I set up?
 ## Software Requirement
@@ -17,6 +19,9 @@ StudentAccomodationSystem is developed in  C#.Net using MVC architecture. Entity
 	<add name="SASContext"  providerName="System.Data.SqlClient" connectionString="Data Source=.\sqlexpress; Initial Catalog=SAS.DB; Integrated Security=True; MultipleActiveResultSets=True"/>
 </connectionStrings>
 ```
+ - Rebuild and start the application
  
 # How do I use it?
- 
+ - Open <http://localhost:53332/> on your web browser to see the appliction.
+ - Use 'admin' as username and password to login as a administrator.
+ - To login as a user, you can use any random username and password (as this application is just a prototype).
